@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<!--
+================================================================================
+REPLACE-ME CHECKLIST (Quick Reference for Lokesh Ahire)
+================================================================================
+1. [ ] WhatsApp & Call Phone Number:
+       - Current placeholder: "91XXXXXXXXXX" (e.g. replace in js/main.js CONFIG.phone)
+       - Nicely formatted display: "+91 XXXXXXXXXX" (in js/main.js CONFIG.displayPhone)
+2. [ ] Email Address:
+       - Current placeholder: "lokesh@example.com" (in js/main.js CONFIG.email & schema)
+3. [ ] Demo URLs:
+       - Dental Demo: "https://demo-dental.vercel.app" (in js/main.js CONFIG.demoLinks.dental)
+       - Physician Demo: "https://demo-physician.vercel.app" (in js/main.js CONFIG.demoLinks.physician)
+       - Skin & Child Demo: "https://demo-skin-child.vercel.app" (in js/main.js CONFIG.demoLinks.skinChild)
+4. [ ] Domain Name (once purchased, e.g., lokeshahire.in):
+       - Update canonical link, og:url, sitemap.xml, robots.txt, and js/main.js CONFIG.domain
+5. [ ] Photos & Mockup Screenshots (in images/):
+       - Real profile photo: images/profile.jpg (Square or circle portrait)
+       - Social share preview: images/og.jpg (1200x630px)
+       - Real project screenshots: demo1-desktop.webp, demo1-mobile.webp, etc.
+================================================================================
+-->
+<html lang="mr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Lokesh Ahire | Clinic &amp; Doctor Website Developer in Nashik</title>
+  <meta name="title" content="Lokesh Ahire | Clinic &amp; Doctor Website Developer in Nashik">
+  <meta name="description" content="Nashik madhil clinics ani doctors sathi professional, mobile friendly websites. Appointment button, Google Maps ani basic SEO sahit. WhatsApp var sampark kara.">
+  <meta name="keywords" content="Nashik doctor website developer, clinic website Nashik, medical website design Nashik, Lokesh Ahire web developer">
+  <meta name="author" content="Lokesh Ahire">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d9488">
+  <link rel="canonical" href="https://lokeshahire.in/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lokeshahire.in/">
+  <meta property="og:title" content="Lokesh Ahire | Clinic &amp; Doctor Website Developer in Nashik">
+  <meta property="og:description" content="Nashik madhil clinics ani doctors sathi professional, mobile friendly websites. Appointment button, Google Maps ani basic SEO sahit.">
+  <meta property="og:image" content="https://lokeshahire.in/images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://lokeshahire.in/">
+  <meta name="twitter:title" content="Lokesh Ahire | Clinic &amp; Doctor Website Developer in Nashik">
+  <meta name="twitter:description" content="Clinics ani doctors sathi simple, fast ani mobile friendly websites. Nashik based developer.">
+  <meta name="twitter:image" content="https://lokeshahire.in/images/og.jpg">
+
+  <!-- Google Fonts: Poppins (Only weights 400, 500, 600, 700 with display=swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data for Local Professional Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Lokesh Ahire - Clinic Website Developer",
+    "image": "https://lokeshahire.in/images/og.jpg",
+    "description": "Professional mobile-friendly website development for clinics and doctors in Nashik.",
+    "url": "https://lokeshahire.in",
+    "telephone": "+91XXXXXXXXXX",
+    "priceRange": "₹4,999 - ₹14,999",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nashik",
+      "addressRegion": "Maharashtra",
+      "postalCode": "422001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.9975,
+      "longitude": 73.7898
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVBAR (Sticky, White, Elevation on Scroll)
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand" aria-label="Lokesh Ahire Homepage">
+        <span>Lokesh Ahire</span>
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-role">Clinic Websites</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+        <a href="#work" class="nav-link">Work (Demos)</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/91XXXXXXXXXX" id="nav-wa-btn" class="btn btn-primary btn-sm" aria-label="Chat on WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.5C8.86 7.5 8.57 7.56 8.32 7.83C8.07 8.11 7.37 8.76 7.37 10.08C7.37 11.41 8.34 12.69 8.47 12.87C8.61 13.05 10.34 15.71 12.98 16.85C13.61 17.12 14.1 17.28 14.48 17.4C15.11 17.6 15.68 17.57 16.14 17.5C16.65 17.43 17.7 16.86 17.92 16.24C18.14 15.63 18.14 15.1 18.07 14.99C18 14.88 17.83 14.82 17.57 14.69C17.32 14.56 16.08 13.95 15.85 13.86C15.62 13.78 15.45 13.74 15.28 14C15.11 14.25 14.62 14.82 14.47 14.99C14.32 15.16 14.17 15.19 13.92 15.06C13.66 14.93 12.86 14.67 11.9 13.82C11.16 13.16 10.66 12.35 10.51 12.1C10.37 11.85 10.5 11.71 10.63 11.58C10.74 11.47 10.88 11.29 11.01 11.14C11.14 10.99 11.18 10.88 11.27 10.71C11.36 10.54 11.31 10.39 11.25 10.27C11.18 10.14 10.69 8.94 10.49 8.45C10.29 7.97 10.09 8.04 9.93 8.03C9.79 8.03 9.61 8.03 9.44 8.03C9.27 8.03 9.17 8.06 9.04 7.5Z"/>
+          </svg>
+          <span>WhatsApp Me</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="nav-menu-btn" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section class="section hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-pill">
+          <span class="hero-pill-pulse" aria-hidden="true"></span>
+          <span>Nashik Doctors &amp; Clinics Specialization</span>
+        </div>
+
+        <h1 class="hero-title">
+          Clinics ani Doctors sathi <span>Professional Websites</span>
+        </h1>
+
+        <p class="hero-sub">
+          Nashik madhil patients tumhala Google var shodhtat. Tumchi website tyanna appointment book karayla madat karel.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://wa.me/91XXXXXXXXXX?text=Namaskar%20Lokesh%2C%20mala%20clinic%20website%20baddal%20vicharaych%20aahe." id="hero-wa-btn" class="btn btn-whatsapp-hero btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.5C8.86 7.5 8.57 7.56 8.32 7.83C8.07 8.11 7.37 8.76 7.37 10.08C7.37 11.41 8.34 12.69 8.47 12.87C8.61 13.05 10.34 15.71 12.98 16.85C13.61 17.12 14.1 17.28 14.48 17.4C15.11 17.6 15.68 17.57 16.14 17.5C16.65 17.43 17.7 16.86 17.92 16.24C18.14 15.63 18.14 15.1 18.07 14.99C18 14.88 17.83 14.82 17.57 14.69C17.32 14.56 16.08 13.95 15.85 13.86C15.62 13.78 15.45 13.74 15.28 14C15.11 14.25 14.62 14.82 14.47 14.99C14.32 15.16 14.17 15.19 13.92 15.06C13.66 14.93 12.86 14.67 11.9 13.82C11.16 13.16 10.66 12.35 10.51 12.1C10.37 11.85 10.5 11.71 10.63 11.58C10.74 11.47 10.88 11.29 11.01 11.14C11.14 10.99 11.18 10.88 11.27 10.71C11.36 10.54 11.31 10.39 11.25 10.27C11.18 10.14 10.69 8.94 10.49 8.45C10.29 7.97 10.09 8.04 9.93 8.03C9.79 8.03 9.61 8.03 9.44 8.03C9.27 8.03 9.17 8.06 9.04 7.5Z"/>
+            </svg>
+            <span>WhatsApp var Bola</span>
+          </a>
+
+          <a href="#work" class="btn btn-secondary btn-lg">
+            <span>Demos Paha</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-trust-line">
+          <span class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Nashik based
+          </span>
+          <span class="trust-dot">•</span>
+          <span class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Mobile friendly
+          </span>
+          <span class="trust-dot">•</span>
+          <span class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Fast delivery
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. DEMO PROJECTS SECTION (#work) — MOST IMPORTANT SECTION
+         ====================================================================== -->
+    <section class="section section--alt" id="work">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">Live Working Prototypes</span>
+          <h2 class="section-title">Demo Projects</h2>
+          <p class="section-subtitle">
+            Nashik madhil veg-veglya clinic specialities sathi banavleli live working models. Khali dilelya live links open karun mobile var test kara.
+          </p>
+        </header>
+
+        <div class="demo-grid">
+          <!-- CARD 1: Dental Clinic (Clean Teal Mood) -->
+          <article class="demo-card demo-card--dental" aria-label="Dental Clinic Website Demo">
+            <div class="demo-preview-stage">
+              <div class="mockup-wrapper">
+                <div class="mockup-desktop">
+                  <div class="mockup-browser-bar">
+                    <span class="browser-dot dot-red"></span>
+                    <span class="browser-dot dot-yellow"></span>
+                    <span class="browser-dot dot-green"></span>
+                    <span class="browser-url">demo-dental.vercel.app</span>
+                  </div>
+                  <img src="images/demo1-desktop.webp" alt="Smile Care Dental Clinic Desktop Preview" width="1280" height="800" loading="lazy">
+                </div>
+                <div class="mockup-mobile">
+                  <img src="images/demo1-mobile.webp" alt="Smile Care Dental Clinic Mobile View" width="450" height="850" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-content">
+              <div class="demo-header-meta">
+                <span class="demo-tag">Dental Specialty</span>
+                <span class="demo-concept-badge">Concept demo — not a real clinic</span>
+              </div>
+
+              <h3 class="demo-title">Dental Clinic Website (Concept Demo)</h3>
+
+              <ul class="demo-bullets">
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Appointment button:</strong> Direct Call ani WhatsApp link ne patient appointment book karto.</span>
+                </li>
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Services page:</strong> Root Canal, Braces, Teeth Cleaning che simple treatments display.</span>
+                </li>
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Google Maps location:</strong> College Road, Nashik clinic address ani timing clear distat.</span>
+                </li>
+              </ul>
+
+              <div class="demo-tech-chips">
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">Bootstrap Grid</span>
+                <span class="tech-chip">Vanilla JS</span>
+                <span class="tech-chip">Teal Design</span>
+              </div>
+
+              <div class="demo-actions">
+                <a href="https://demo-dental.vercel.app" id="demo-dental-link" class="btn btn-block demo-btn-live" target="_blank" rel="noopener noreferrer">
+                  <span>Live Demo Paha</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: General Physician (Professional Blue Mood) -->
+          <article class="demo-card demo-card--physician" aria-label="General Physician Website Demo">
+            <div class="demo-preview-stage">
+              <div class="mockup-wrapper">
+                <div class="mockup-desktop">
+                  <div class="mockup-browser-bar">
+                    <span class="browser-dot dot-red"></span>
+                    <span class="browser-dot dot-yellow"></span>
+                    <span class="browser-dot dot-green"></span>
+                    <span class="browser-url">demo-physician.vercel.app</span>
+                  </div>
+                  <img src="images/demo2-desktop.webp" alt="General Physician Website Desktop Preview" width="1280" height="800" loading="lazy">
+                </div>
+                <div class="mockup-mobile">
+                  <img src="images/demo2-mobile.webp" alt="General Physician Website Mobile View" width="450" height="850" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-content">
+              <div class="demo-header-meta">
+                <span class="demo-tag">Physician &amp; OPD</span>
+                <span class="demo-concept-badge">Concept demo — not a real clinic</span>
+              </div>
+
+              <h3 class="demo-title">General Physician Website (Concept Demo)</h3>
+
+              <ul class="demo-bullets">
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Appointment button:</strong> Morning &amp; Evening consultation slots WhatsApp var request kara.</span>
+                </li>
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Services page:</strong> Diabetes care, Blood Pressure checkup, ECG ani fever treatment list.</span>
+                </li>
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Google Maps location:</strong> Gangapur Road clinic location, parking info ani consultation timings.</span>
+                </li>
+              </ul>
+
+              <div class="demo-tech-chips">
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">CSS3</span>
+                <span class="tech-chip">Vanilla JS</span>
+                <span class="tech-chip">Medical Blue</span>
+              </div>
+
+              <div class="demo-actions">
+                <a href="https://demo-physician.vercel.app" id="demo-physician-link" class="btn btn-block demo-btn-live" target="_blank" rel="noopener noreferrer">
+                  <span>Live Demo Paha</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: Skin & Child Specialist (Soft Warm Rose Mood) -->
+          <article class="demo-card demo-card--skinchild" aria-label="Skin &amp; Child Specialist Website Demo">
+            <div class="demo-preview-stage">
+              <div class="mockup-wrapper">
+                <div class="mockup-desktop">
+                  <div class="mockup-browser-bar">
+                    <span class="browser-dot dot-red"></span>
+                    <span class="browser-dot dot-yellow"></span>
+                    <span class="browser-dot dot-green"></span>
+                    <span class="browser-url">demo-skin-child.vercel.app</span>
+                  </div>
+                  <img src="images/demo3-desktop.webp" alt="Skin and Child Specialist Website Desktop Preview" width="1280" height="800" loading="lazy">
+                </div>
+                <div class="mockup-mobile">
+                  <img src="images/demo3-mobile.webp" alt="Skin and Child Specialist Website Mobile View" width="450" height="850" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-content">
+              <div class="demo-header-meta">
+                <span class="demo-tag">Derma &amp; Pediatric</span>
+                <span class="demo-concept-badge">Concept demo — not a real clinic</span>
+              </div>
+
+              <h3 class="demo-title">Skin &amp; Child Specialist Website (Concept Demo)</h3>
+
+              <ul class="demo-bullets">
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Appointment button:</strong> Pediatric vaccination &amp; skin consultation sathi quick booking.</span>
+                </li>
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Services page:</strong> Bal rog upchar, vaccination timetable ani dermatology care FAQ.</span>
+                </li>
+                <li>
+                  <span class="bullet-icon" aria-hidden="true">✓</span>
+                  <span><strong>Google Maps location:</strong> Indira Nagar, Nashik road directions sahit instant route guide.</span>
+                </li>
+              </ul>
+
+              <div class="demo-tech-chips">
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">CSS3</span>
+                <span class="tech-chip">Vanilla JS</span>
+                <span class="tech-chip">Warm Rose</span>
+              </div>
+
+              <div class="demo-actions">
+                <a href="https://demo-skin-child.vercel.app" id="demo-skinchild-link" class="btn btn-block demo-btn-live" target="_blank" rel="noopener noreferrer">
+                  <span>Live Demo Paha</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. SERVICES SECTION (#services) — 4 CARDS WITH INLINE SVGs
+         ====================================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">Simple &amp; Result Oriented</span>
+          <h2 class="section-title">Services</h2>
+          <p class="section-subtitle">
+            Clinics sathi laganarya sagalya mahatvachya goshti ekach package madhe.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Clinic Website</h3>
+            <p class="service-desc">Tumchi clinic, doctors ani timings ek clean website var.</p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Mobile Friendly Design</h3>
+            <p class="service-desc">Patients phone var pahtat, mhanun phone sathi first design.</p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">WhatsApp / Call Appointment Button</h3>
+            <p class="service-desc">Ek tap madhe patient tumhala call kimva WhatsApp karel.</p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="service-title">Google Maps + Basic SEO</h3>
+            <p class="service-desc">Clinic Google var sapadel ani rasta sahaj milel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. PROCESS SECTION — 4 NUMBERED STEPS
+         ====================================================================== -->
+    <section class="section section--alt" id="process">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">Fast &amp; Transparent</span>
+          <h2 class="section-title">Process</h2>
+          <p class="section-subtitle">
+            Kontihi gujhmunjh nahi. Simple 4 steps madhe tumchi clinic website live hote.
+          </p>
+        </header>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Requirements</h3>
+              <p class="step-desc">Tumchi clinic, services ani goals samjun gheto.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Design Preview</h3>
+              <p class="step-desc">Launch adhi tumhala design dakhavto, changes gheto.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Launch</h3>
+              <p class="step-desc">Domain, hosting ani live website setup.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3 class="step-title">Support</h3>
+              <p class="step-desc">Launch nantar chhote changes ani madat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. ABOUT SECTION (#about) — HONEST AND SIMPLE
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-photo-wrapper">
+            <img src="images/profile.jpg" alt="Lokesh Ahire" class="about-photo" width="170" height="170" loading="lazy">
+            <span class="about-badge" title="Nashik Based Developer" aria-label="Verified Developer">✓</span>
+          </div>
+
+          <div class="about-info">
+            <h2 class="about-name">Lokesh Ahire (Lucky)</h2>
+            <span class="about-role">Web Developer • Nashik, Maharashtra</span>
+
+            <p class="about-bio">
+              Mi Lokesh Ahire, Nashik madhe BSc Computer Science cha student aahe. Mi clinics ani doctors sathi simple, fast ani mobile friendly websites banvto. Tumchi requirement samjun ghyayla ani clear communication karayla mala avadte.
+            </p>
+
+            <div class="about-pills">
+              <span class="about-pill">📍 Nashik Native</span>
+              <span class="about-pill">🎓 BSc Computer Science</span>
+              <span class="about-pill">💬 Direct WhatsApp Communication</span>
+              <span class="about-pill">⚡ Fast Turnaround</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. PRICING SECTION (#pricing)
+         ====================================================================== -->
+    <section class="section section--alt" id="pricing">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">Clear &amp; Honest Pricing</span>
+          <h2 class="section-title">Website Packages</h2>
+          <p class="section-subtitle">
+            Tumchya garje anusar yogya package nivada. Kontehi hidden charges nahit.
+          </p>
+        </header>
+
+        <div class="pricing-grid">
+          <!-- BASIC PACKAGE -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">Basic Package</h3>
+              <span class="pricing-from">Starting from</span>
+              <div class="pricing-price" id="price-basic">₹4,999</div>
+              <span class="pricing-price-sub">One-time payment</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <span class="feature-check">✓</span>
+                <span>1-Page Clean Website Layout</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Mobile Friendly Responsive Design</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Direct WhatsApp &amp; Call Buttons</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Google Maps Location Embed</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Clinic Timings &amp; OPD Information</span>
+              </li>
+            </ul>
+
+            <a href="https://wa.me/91XXXXXXXXXX" id="pricing-btn-basic" class="btn btn-secondary btn-block">
+              WhatsApp var Bola (Basic)
+            </a>
+          </div>
+
+          <!-- STANDARD PACKAGE (MOST POPULAR) -->
+          <div class="pricing-card pricing-card--popular">
+            <span class="pricing-badge-popular">⭐ Most Popular</span>
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">Standard Package</h3>
+              <span class="pricing-from">Starting from</span>
+              <div class="pricing-price" id="price-standard">₹9,999</div>
+              <span class="pricing-price-sub">Most recommended for clinics</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <span class="feature-check">✓</span>
+                <span><strong>4 to 5 Pages:</strong> Home, Services, About Doctor, Timings, Contact</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Specialized Doctor Profile &amp; Qualifications</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Google Maps + Basic Local SEO Setup</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>WhatsApp Appointment Request System</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span><strong>1 Month Free Support</strong> &amp; minor updates</span>
+              </li>
+            </ul>
+
+            <a href="https://wa.me/91XXXXXXXXXX" id="pricing-btn-standard" class="btn btn-primary btn-block">
+              WhatsApp var Bola (Standard)
+            </a>
+          </div>
+
+          <!-- PREMIUM PACKAGE -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-plan-name">Premium Package</h3>
+              <span class="pricing-from">Starting from</span>
+              <div class="pricing-price" id="price-premium">₹14,999</div>
+              <span class="pricing-price-sub">Complete digital presence</span>
+            </div>
+
+            <ul class="pricing-features">
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Standard Package madhil sarva features</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Clinic Photo Gallery &amp; Patient FAQ Section</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Google Business Profile Setup &amp; Verification help</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span>Custom Domain &amp; Professional Email config</span>
+              </li>
+              <li>
+                <span class="feature-check">✓</span>
+                <span><strong>3 Months Priority Support</strong> &amp; updates</span>
+              </li>
+            </ul>
+
+            <a href="https://wa.me/91XXXXXXXXXX" id="pricing-btn-premium" class="btn btn-secondary btn-block">
+              WhatsApp var Bola (Premium)
+            </a>
+          </div>
+        </div>
+
+        <p class="pricing-note">
+          * Final price clinic requirement var depend karto.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. CONTACT SECTION (#contact) — NO FORM, FAST DIRECT REACH
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <header class="section-header" style="margin-bottom: 20px;">
+            <span class="section-badge">Sampark Kara</span>
+            <h2 class="section-title">Clinic Website Suru Karaychi Aahe?</h2>
+            <p class="section-subtitle">
+              Kontihi lamb form bharaychi garaj nahi. Direct WhatsApp var message kara, mi svatah uttar dein.
+            </p>
+          </header>
+
+          <div class="contact-highlight-msg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>WhatsApp var message kara, same day reply deto.</span>
+          </div>
+
+          <div class="contact-wa-action">
+            <a href="https://wa.me/91XXXXXXXXXX" id="contact-wa-btn" class="btn contact-wa-btn btn-lg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.5C8.86 7.5 8.57 7.56 8.32 7.83C8.07 8.11 7.37 8.76 7.37 10.08C7.37 11.41 8.34 12.69 8.47 12.87C8.61 13.05 10.34 15.71 12.98 16.85C13.61 17.12 14.1 17.28 14.48 17.4C15.11 17.6 15.68 17.57 16.14 17.5C16.65 17.43 17.7 16.86 17.92 16.24C18.14 15.63 18.14 15.1 18.07 14.99C18 14.88 17.83 14.82 17.57 14.69C17.32 14.56 16.08 13.95 15.85 13.86C15.62 13.78 15.45 13.74 15.28 14C15.11 14.25 14.62 14.82 14.47 14.99C14.32 15.16 14.17 15.19 13.92 15.06C13.66 14.93 12.86 14.67 11.9 13.82C11.16 13.16 10.66 12.35 10.51 12.1C10.37 11.85 10.5 11.71 10.63 11.58C10.74 11.47 10.88 11.29 11.01 11.14C11.14 10.99 11.18 10.88 11.27 10.71C11.36 10.54 11.31 10.39 11.25 10.27C11.18 10.14 10.69 8.94 10.49 8.45C10.29 7.97 10.09 8.04 9.93 8.03C9.79 8.03 9.61 8.03 9.44 8.03C9.27 8.03 9.17 8.06 9.04 7.5Z"/>
+              </svg>
+              <span>WhatsApp var Chat Kara</span>
+            </a>
+          </div>
+
+          <div class="contact-details-grid">
+            <a href="tel:+91XXXXXXXXXX" id="contact-phone-link" class="contact-item" aria-label="Call Lokesh Ahire">
+              <svg class="contact-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span class="contact-val">+91 XXXXXXXXXX</span>
+            </a>
+
+            <a href="mailto:lokesh@example.com" id="contact-email-link" class="contact-item" aria-label="Send email">
+              <svg class="contact-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span class="contact-val">lokesh@example.com</span>
+            </a>
+
+            <div class="contact-item">
+              <svg class="contact-item-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Nashik, Maharashtra</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Lokesh Ahire</div>
+          <p class="footer-tagline">
+            Professional clinic &amp; doctor websites in Nashik, Maharashtra.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Nashik, Maharashtra, India</div>
+        <div>
+          &copy; <span id="current-year">2026</span> Lokesh Ahire. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING WHATSAPP BUTTON (Bottom-Right, Mobile Friendly)
+       ======================================================================== -->
+  <a href="https://wa.me/91XXXXXXXXXX" id="floating-wa-btn" class="floating-whatsapp" aria-label="Chat on WhatsApp with Lokesh">
+    <span class="floating-pulse" aria-hidden="true"></span>
+    <svg class="floating-whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.5C8.86 7.5 8.57 7.56 8.32 7.83C8.07 8.11 7.37 8.76 7.37 10.08C7.37 11.41 8.34 12.69 8.47 12.87C8.61 13.05 10.34 15.71 12.98 16.85C13.61 17.12 14.1 17.28 14.48 17.4C15.11 17.6 15.68 17.57 16.14 17.5C16.65 17.43 17.7 16.86 17.92 16.24C18.14 15.63 18.14 15.1 18.07 14.99C18 14.88 17.83 14.82 17.57 14.69C17.32 14.56 16.08 13.95 15.85 13.86C15.62 13.78 15.45 13.74 15.28 14C15.11 14.25 14.62 14.82 14.47 14.99C14.32 15.16 14.17 15.19 13.92 15.06C13.66 14.93 12.86 14.67 11.9 13.82C11.16 13.16 10.66 12.35 10.51 12.1C10.37 11.85 10.5 11.71 10.63 11.58C10.74 11.47 10.88 11.29 11.01 11.14C11.14 10.99 11.18 10.88 11.27 10.71C11.36 10.54 11.31 10.39 11.25 10.27C11.18 10.14 10.69 8.94 10.49 8.45C10.29 7.97 10.09 8.04 9.93 8.03C9.79 8.03 9.61 8.03 9.44 8.03C9.27 8.03 9.17 8.06 9.04 7.5Z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
