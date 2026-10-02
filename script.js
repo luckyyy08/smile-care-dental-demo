@@ -1,5 +1,5 @@
 /**
- * [Clinic Name] — Main JavaScript Logic
+ * Smile Care Dental Clinic — Main JavaScript Logic
  * Modules: Sticky Nav, Mobile Menu Drawer, Accessible FAQ Accordion,
  * Form Validation with Phone Keypad & Min-Date, and Scroll Reveal.
  */
@@ -8,11 +8,14 @@
   'use strict';
 
   // ── Central Clinic Configuration ──────────────────────────────────────────
+  // Edit clinic contact details here to update throughout JS dynamic hooks
   const CLINIC = {
-    name: '[Clinic Name]',
-    phone: '+91XXXXXXXXXX',
-    whatsapp: '91XXXXXXXXXX',
-    address: '[Street Address], Near [Landmark], [Area], Nashik, Maharashtra 422005'
+    name: "Smile Care Dental Clinic",
+    phoneDisplay: "+91 98XXX XXXXX",
+    phoneTel: "+9198XXXXXXXX",
+    whatsapp: "9198XXXXXXXX",
+    email: "hello@smilecaredemo.in",
+    address: "2nd Floor, Sample Plaza, College Road, Nashik, Maharashtra 422005"
   };
 
   // ── Initialize on DOMContentLoaded ────────────────────────────────────────
@@ -93,7 +96,7 @@
     });
   }
 
-  // ── 3. Accessible FAQ Accordion ──────────────────────────────────────────
+  // ── 3. Accessible FAQ Accordion (One open at a time) ──────────────────────
   function setupFaqAccordion() {
     const faqButtons = document.querySelectorAll('.faq-button');
     if (!faqButtons.length) return;
@@ -133,7 +136,7 @@
     });
   }
 
-  // ── 4. Appointment Form Validation ───────────────────────────────────────
+  // ── 4. Appointment Form Validation & Submission ──────────────────────────
   function setupAppointmentForm() {
     const form = document.getElementById('appointmentForm');
     const successCard = document.getElementById('formSuccess');
@@ -143,7 +146,7 @@
     const phoneInput = document.getElementById('patientPhone');
     const dateInput = document.getElementById('apptDate');
     const timeInput = document.getElementById('apptTime');
-    const treatInput = document.getElementById('treatment');
+    const reasonInput = document.getElementById('visitReason');
 
     const nameError = document.getElementById('nameError');
     const phoneError = document.getElementById('phoneError');
@@ -151,7 +154,7 @@
     const timeError = document.getElementById('timeError');
     const waLink = document.getElementById('waConfirmLink');
 
-    // Phone 10-digit regex for India (starts with 6, 7, 8, 9)
+    // Phone 10-digit Indian mobile validation (starts with 6, 7, 8, 9)
     const phoneRegex = /^[6-9]\d{9}$/;
 
     const validateName = () => {
@@ -163,7 +166,7 @@
     };
 
     const validatePhone = () => {
-      const cleanPhone = phoneInput.value.replace(/[\s\-\+]/g, '');
+      const cleanPhone = phoneInput.value.replace(/[\s\-\+]/g, '').replace(/^91/, '');
       const valid = phoneRegex.test(cleanPhone);
       if (phoneError) phoneError.classList.toggle('visible', !valid);
       phoneInput.classList.toggle('is-invalid', !valid);
@@ -202,22 +205,31 @@
         const patientPhone = phoneInput.value.trim();
         const apptDate = dateInput.value;
         const apptTime = timeInput.value;
-        const treatment = treatInput ? treatInput.value : 'General Consultation';
+        const reason = reasonInput ? reasonInput.value : 'Check-up';
 
-        // Prepare prefilled WhatsApp URL
+        // TODO: Plug in real endpoint here (e.g. Formspree, Google Apps Script, or PHP mailer)
+        // Example:
+        // fetch('https://formspree.io/f/your_form_id', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({ patientName, patientPhone, apptDate, apptTime, reason })
+        // });
+
+        // Prepare prefilled WhatsApp URL with form values
         if (waLink) {
           const msg = encodeURIComponent(
-            `Hello [Clinic Name], I would like to confirm my appointment:\n\n` +
+            `Hello Smile Care Dental Clinic, I would like to book an appointment:\n\n` +
             `• Name: ${patientName}\n` +
             `• Phone: ${patientPhone}\n` +
-            `• Date: ${apptDate}\n` +
-            `• Slot: ${apptTime}\n` +
-            `• Treatment: ${treatment}`
+            `• Preferred Date: ${apptDate}\n` +
+            `• Preferred Time: ${apptTime}\n` +
+            `• Reason: ${reason}`
           );
           waLink.href = `https://wa.me/${CLINIC.whatsapp}?text=${msg}`;
         }
 
-        // Show success state smoothly
+        // Show confirmation message exactly as required:
+        // "Thank you! Our team will call you shortly to confirm your appointment."
         form.style.display = 'none';
         if (successCard) {
           successCard.classList.add('show');

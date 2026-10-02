@@ -1,5 +1,5 @@
 /* ==========================================================================
-   [Clinic Name] — Mobile-First Responsive Stylesheet
+   Smile Care Dental Clinic — Mobile-First Responsive Stylesheet
    Designed for Nashik Dental Clinic
    Palette: Deep Navy Blues (#0C1B2E, #1A3358) + Warm Copper Accent (#D17A4E)
    Architecture: Mobile-First with min-width media queries
@@ -99,7 +99,7 @@ body {
 }
 
 /* Remove bottom padding on tablet and desktop where bottom bar is hidden */
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   body {
     padding-bottom: 0;
   }
@@ -561,15 +561,100 @@ p {
 }
 
 .about-text h2 {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   letter-spacing: -0.02em;
 }
-.about-text h2 span {
-  color: var(--navy-600);
+.about-text .doctor-sub {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--copper);
+  margin-bottom: 16px;
+  font-style: italic;
 }
 .about-text p {
   color: var(--ink-70);
   margin-bottom: 14px;
+}
+.doc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.doc-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  background: var(--cream-dark);
+  border: 1px solid var(--ink-10);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy-900);
+}
+.doctor-card-box {
+  background: var(--white);
+  border: 1px solid var(--ink-10);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  position: relative;
+}
+.doctor-avatar-badge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.initials-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--copper);
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-heavy);
+}
+.doctor-card-content h3 {
+  font-size: 1.5rem;
+  color: var(--navy-900);
+  margin-bottom: 4px;
+}
+.doctor-card-content .designation {
+  font-size: 0.95rem;
+  color: var(--ink-50);
+  margin-bottom: 20px;
+}
+.card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  border-top: 1px solid var(--ink-10);
+  padding-top: 20px;
+}
+.feature-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--ink-70);
+}
+.feature-line svg {
+  color: var(--copper);
+  flex-shrink: 0;
+}
+.trust-sep {
+  color: var(--white-40);
+  display: none;
+}
+@media (min-width: 576px) {
+  .trust-sep {
+    display: inline;
+  }
 }
 .btn-consult {
   display: inline-flex;
@@ -782,22 +867,6 @@ p {
 .service-card:hover .service-link {
   color: var(--copper);
   gap: 12px;
-}
-
-/* Services Grid: 1 column on mobile, 2 on tablet, 3 on desktop */
-@media (min-width: 640px) {
-  .services-grid > [class*="col-"] {
-    flex: 0 0 50%;
-    max-width: 50%;
-    width: 50%;
-  }
-}
-@media (min-width: 992px) {
-  .services-grid > [class*="col-"] {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    width: 33.333333%;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1352,13 +1421,10 @@ p {
   background: #25D366;
 }
 
-/* Strictly hide bottom sticky bar on tablet and desktop (min-width 700px accommodates 768px viewport with Windows scrollbar) */
-@media (min-width: 700px) {
+/* Strictly hide bottom sticky bar on tablet and desktop */
+@media (min-width: 768px) {
   .mobile-sticky-bar {
     display: none !important;
-  }
-  body {
-    padding-bottom: 0 !important;
   }
 }
 
