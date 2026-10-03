@@ -102,9 +102,14 @@
     if (!faqButtons.length) return;
 
     faqButtons.forEach((button) => {
-      button.addEventListener('click', () => {
+      if (button.dataset.faqInit) return;
+      button.dataset.faqInit = 'true';
+
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        const panelId = button.getAttribute('aria-controls');
+        const panel = document.getElementById(panelId);
 
         // Close other open FAQ items for a clean single-open behavior
         faqButtons.forEach((otherBtn) => {
@@ -129,7 +134,8 @@
           button.setAttribute('aria-expanded', 'true');
           if (panel) {
             panel.classList.add('open');
-            panel.style.maxHeight = panel.scrollHeight + 30 + 'px';
+            const targetHeight = Math.max(panel.scrollHeight + 30, 100);
+            panel.style.maxHeight = targetHeight + 'px';
           }
         }
       });
